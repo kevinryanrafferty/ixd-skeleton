@@ -3,10 +3,15 @@
 	<title>Test Page</title>
 </head>
 <style>
+	
+a {
+	text-decoration: none;
+}
+
 .rectangle {
   height: 600px;
   width: 400px;
-  background-color: #000;
+  background-color: #3d3d3d;
 }
 .rectangle2 {
 	height: 70px;
@@ -15,13 +20,14 @@
 }
 .button {
 	background-color: #FFF;
-	color: #000;
+	color: #5c5c5c;
 	padding: 10px;
 	
 	
 	
 	
 }
+
 .myBtn {
 	width: 400px;
 	height: 25px;
@@ -29,7 +35,87 @@
 .back {
 	width: 50px;
 	height: 25px;
+	background-color: #5c5c5c;
+	color: white;
+	text-decoration: none;
 }
+
+html{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#backButton {
+	color: white;
+	font-size: 1.3rem;
+}
+
+#topRectangle {
+	position: absolute;
+	margin-top: -600px;
+	width: 400px;
+	height: 70px;
+	background-color: #5c5c5c;
+}
+
+#tempName {
+	color: black;
+}
+
+.switch input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+	background-color: clear;
+	width: 400px;
+	height: 45px;
+	position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.switch input:checked ~ .checkmark {
+	background-color: #3d3d3d;
+	opacity: 0.3;
+}
+
+#nameIn {
+	border: none;
+	height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+	font-size: 1.8rem;
+	width: 270px;
+}
+
+#nameIn:focus {
+	border: none;
+}
+
+input[type=text]:focus {
+	outline: none;
+}
+
+#TaskList {
+	background-color: white;
+	position: absolute;
+	margin-top: -49px;
+	height: 45px;
+	width: 400px;
+}
+
+#TaskList h3 {
+	position: absolute;
+	margin-top: 12px;
+	margin-left: 9px;
+	font-size: 1.8rem;
+	color: #5c5c5c;
+}
+
 </style>
 <body>
 <h1>onTrack Prototype Group 3<h1/>
@@ -38,22 +124,68 @@
 <div class="rectangle">
 	
 </div>
-<div style="position:absolute;left:150px;top:70px; color: #FFF;text-align:center;" > ADD </div>
-<div class="button back" style="position:absolute;left:18px; top:70px; font-size: 18;">
-	<center><a href="javascript:history.back()" >Back </a></center>
+<div id="topRectangle">
+	<div style="position:absolute;margin-left:165px;top:18px; color: #FFF;text-align:center;" >ADD </div>
+	<div class="button back" style="position:absolute;margin-left:0px; top:15px; font-size: 18; width: 70px; color: white;">
+		<center><a href="javascript:history.back()" id="backButton" >&lt Back </a></center>
+	</div>
 </div>
-<div class="button myBtn" style="position:absolute;top:200px;"><center>Monday > </center>
-	<label class="switch">
+
+<div class="button myBtn" style="position:absolute;top:160px;">Name: <input id="nameIn" type="text"></input></div>
+
+<div class="button myBtn" style="position:absolute;top:240px;">Monday
+	<label class="switch" style="margin-left:220px">
   		<input type="checkbox">
-  		<span class="slider round"></span>
+			<span class="slider round"></span>
+			<span class="checkmark"></span>
 	</label>
 </div>
-<div class="button myBtn" style="position:absolute;top:250px;"><center>Tuesday > </center></div>
-<div class="button myBtn" style="position:absolute;top:300px;"><center>Wednesday > </center></div>
-<div class="button myBtn" style="position:absolute;top:350px;"><center>Thursday > </center></div>
-<div class="button myBtn" style="position:absolute;top:400px;"><center>Friday > </center></div>
-<div class="button myBtn" style="position:absolute;top:450px;"><center>Saturday > </center></div>
-<div class="button myBtn" style="position:absolute;top:500px;"><center>Sunday > </center></div>
+<div class="button myBtn" style="position:absolute;top:290px;">Tuesday
+	<label class="switch" style="margin-left:214px">
+			<input type="checkbox">
+			<span class="slider round"></span>
+			<span class="checkmark"></span>
+	</label>
+</div>
+<div class="button myBtn" style="position:absolute;top:340px;">Wednesday
+	<label class="switch" style="margin-left:164px">
+			<input type="checkbox">
+			<span class="slider round"></span>
+			<span class="checkmark"></span>
+	</label>
+</div>
+<div class="button myBtn" style="position:absolute;top:390px;">Thursday
+	<label class="switch" style="margin-left:197px">
+			<input type="checkbox">
+			<span class="slider round"></span>
+			<span class="checkmark"></span>
+	</label>
+</div>
+<div class="button myBtn" style="position:absolute;top:440px;">Friday
+	<label class="switch" style="margin-left:245px">
+			<input type="checkbox">
+			<span class="slider round"></span>
+			<span class="checkmark"></span>
+	</label>
+</div>
+<div class="button myBtn" style="position:absolute;top:490px;">Saturday
+	<label class="switch" style="margin-left:204px">
+			<input type="checkbox">
+			<span class="slider round"></span>
+			<span class="checkmark"></span>
+	</label>
+</div>
+<div class="button myBtn" style="position:absolute;top:540px;">Sunday
+	<label class="switch" style="margin-left:225px">
+			<input type="checkbox">
+			<span class="slider round"></span>
+			<span class="checkmark"></span>
+	</label>
+</div>
+
+<div id="TaskList">
+	<h3>Task List:</h3>
+</div>
 
 </body>
 </html>
